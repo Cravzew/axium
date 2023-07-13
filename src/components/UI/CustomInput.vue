@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .input-button {
   border-left: 1px solid #b1b1b1;
   display: flex;

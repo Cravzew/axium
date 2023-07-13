@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .header-32 {
   line-height: 150%;
   font-size: 32px;
@@ -52,7 +52,7 @@ export default {
   font-size: 16px;
 }
 
-.header-16 {
+.header-16b {
   line-height: 150%;
   font-size: 16px;
   font-weight: 500;

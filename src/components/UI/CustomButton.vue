@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .button {
   background-color: var(--accent-1);
   border-radius: 10px;

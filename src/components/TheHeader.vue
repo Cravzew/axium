@@ -3,18 +3,26 @@
     <custom-container>
       <div class="header-upper">
         <nav class="header-upper-left">
-          <custom-text>
-            О компании
-          </custom-text>
-          <custom-text>
-            Новости
-          </custom-text>
-          <custom-text>
-            Статьи
-          </custom-text>
-          <custom-text>
-            Контакты
-          </custom-text>
+          <router-link to="/">
+            <custom-text>
+              О компании
+            </custom-text>
+          </router-link>
+          <router-link to="/">
+            <custom-text>
+              Новости
+            </custom-text>
+          </router-link>
+          <router-link to="/">
+            <custom-text>
+              Статьи
+            </custom-text>
+          </router-link>
+          <router-link to="/">
+            <custom-text>
+              Контакты
+            </custom-text>
+          </router-link>
         </nav>
         <div class="header-upper-right">
           <custom-text class="header-upper-text" tag="a" href="tel:74959336147">
@@ -58,7 +66,7 @@
 export default {};
 </script>
 
-<style scoped>
+<style>
 .header-counter {
   display: flex;
   align-items: center;

@@ -1,6 +1,7 @@
 <template>
   <TheHeader/>
   <router-view/>
+  <TheFooter/>
 </template>
 
 <style>
@@ -37,6 +38,12 @@
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 :root {
@@ -46,9 +53,9 @@ a {
   --white: #ffffff;
   --black-0-3: rgba(51, 51, 51, 0.3);
   --other-grad: linear-gradient(
-    180deg,
-    rgba(170, 173, 178, 1) 0%,
-    rgba(200, 201, 203, 1) 100%
+      180deg,
+      rgba(170, 173, 178, 1) 0%,
+      rgba(200, 201, 203, 1) 100%
   );
   --other-category-1: #f98c23;
   --other-category-2: #ae8eb5;
@@ -59,12 +66,6 @@ a {
   --other-category-7: #8467ca;
   --other-category-8: #c39440;
   --other-stroke-design-system: #9747ff;
-}
-
-img {
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 
 button {
@@ -79,4 +80,5 @@ body {
 }
 </style>
 <script setup>
-import TheHeader from '@/components/TheHeader.vue'; </script>
+import TheHeader from '@/components/TheHeader.vue';
+import TheFooter from "@/components/TheFooter.vue";</script>

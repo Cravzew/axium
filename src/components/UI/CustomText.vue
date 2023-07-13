@@ -39,7 +39,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .text-16 {
   line-height: 150%;
   font-size: 16px;
