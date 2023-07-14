@@ -37,7 +37,7 @@
       </div>
       <div class="header-down">
         <router-link class="mr-101" to="/">
-          <img src="../assets/images/logo.jpg" alt="logo axium">
+          <img src="../../assets/images/logo.jpg" alt="logo axium">
         </router-link>
         <custom-button class="mr-101">
           Каталог

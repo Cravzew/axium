@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" :class="customHeaderSize">
+  <component :is="tag" :class="customHeaderSize" :style="customHeaderColor">
     <slot></slot>
   </component>
 </template>
@@ -16,6 +16,10 @@ export default {
       type: String,
       default: '32',
     },
+    color: {
+      type: String,
+      default: 'var(--black)'
+    }
   },
   computed: {
     customHeaderSize() {
@@ -25,6 +29,11 @@ export default {
         'header-21': this.size === '21',
         'header-16': this.size === '16',
         'header-16b': this.size === '16b',
+      };
+    },
+    customHeaderColor() {
+      return {
+        color: this.color
       };
     },
   },

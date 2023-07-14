@@ -4,6 +4,7 @@ import ParagraphText from '@/components/UI/CustomText.vue';
 import customButton from "@/components/UI/CustomButton.vue";
 import customInput from "@/components/UI/CustomInput.vue";
 import customGrid from "@/components/UI/CustomGrid.vue";
+import customList from "@/components/UI/CustomListText.vue";
 
 export default [
     MainContainer,
@@ -11,5 +12,6 @@ export default [
     ParagraphText,
     customButton,
     customInput,
-    customGrid
+    customGrid,
+    customList
 ];

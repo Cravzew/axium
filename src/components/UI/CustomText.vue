@@ -45,7 +45,7 @@ export default {
   font-size: 16px;
 }
 
-.text-16 {
+.text-16b {
   line-height: 150%;
   font-size: 16px;
   font-weight: 500;
