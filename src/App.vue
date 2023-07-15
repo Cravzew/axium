@@ -8,8 +8,8 @@
 @font-face {
   font-family: 'Stolzl';
   src: local('Stolzl Regular'), local('Stolzl-Regular'),
-  url('../src/assets/fonts/Stolzl-Light.woff2') format('woff2'),
-  url('../src/assets/fonts/Stolzl-Light.woff') format('woff');
+  url('../src/assets/fonts/Stolzl-Book.woff2') format('woff2'),
+  url('../src/assets/fonts/Stolzl-Book.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -17,8 +17,8 @@
 @font-face {
   font-family: 'Stolzl';
   src: local('Stolzl Medium'), local('Stolzl-Medium'),
-  url('../src/assets/fonts/Stolzl-Book.woff2') format('woff2'),
-  url('../src/assets/fonts/Stolzl-Book.woff') format('woff');
+  url('../src/assets/fonts/Stolzl-Regular.woff2') format('woff2'),
+  url('../src/assets/fonts/Stolzl-Regular.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }

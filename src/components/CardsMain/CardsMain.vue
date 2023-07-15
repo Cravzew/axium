@@ -6,17 +6,28 @@
       </custom-header>
       <arrow-link-icon/>
     </div>
-    <custom-grid columns="4">
-
+    <custom-grid tag="ul" columns="4">
+      <product-card :list="list"/>
     </custom-grid>
   </section>
 </template>
 
 <script>
+import photo from '../../assets/images/productCard.jpg'
 export default {
   props: {
     title: {
       type: String
+    }
+  },
+  data() {
+    return {
+      list: [
+        {name: 'Скальпель анал', price: '3 600 P', link: '/', image: photo},
+        {name: 'Скальпель анал', price: '3 600 P', link: '/', image: photo},
+        {name: 'Скальпель анал', price: '3 600 P', link: '/', image: photo},
+        {name: 'Скальпель анал', price: '3 600 P', link: '/', image: photo},
+      ]
     }
   }
 }

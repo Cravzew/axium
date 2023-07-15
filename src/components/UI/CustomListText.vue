@@ -21,7 +21,6 @@ export default {
   props: {
     list: {
       type: Array,
-      required: true
     },
     iconMarginRight: {
       type: String,

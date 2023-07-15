@@ -1,7 +1,7 @@
 <template>
-  <div :style="gridStyle">
+  <component :is="tag" :style="gridStyle">
     <slot></slot>
-  </div>
+  </component>
 </template>
 
 <script>
@@ -15,6 +15,10 @@ export default {
     gap: {
       type: String,
       default: '24px'
+    },
+    tag: {
+      type: String,
+      default: 'div'
     }
   },
   computed: {

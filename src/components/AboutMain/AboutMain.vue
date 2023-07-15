@@ -50,6 +50,7 @@ export default {}
 .about-main {
   display: flex;
   justify-content: space-between;
+  padding: 150px 0;
 }
 
 .about-main-text {
