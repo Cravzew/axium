@@ -43,7 +43,6 @@ export default {
   background: var(--other-grad);
   padding: 88px 100px;
   position: relative;
-  margin-bottom: 120px;
 }
 
 .hero-content {

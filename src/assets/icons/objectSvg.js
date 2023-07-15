@@ -28,6 +28,10 @@ const iconObject =
         blueSquare: `<svg fill="none" height="8" viewBox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg">
 <rect fill="#84C0EA" height="8" rx="2" width="8"/>
 </svg>
+`,
+        whiteSquare: `<svg fill="none" height="8" viewBox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg">
+<rect fill="white" height="8" rx="2" width="8"/>
+</svg>
 `
     }
 

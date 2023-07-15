@@ -11,24 +11,24 @@ export default {
     columns: {
       type: String,
       default: '3'
-    }
-  },
-  data() {
-    return {
-      gridTemplateColumns: this.columns
+    },
+    gap: {
+      type: String,
+      default: '24px'
     }
   },
   computed: {
     gridStyle() {
       return {
         display: 'grid',
-        gridTemplateColumns: `repeat(${this.columns}, 1fr)`
+        gridTemplateColumns: `repeat(${this.columns}, 1fr)`,
+        gap: `${this.gap}`
       }
     }
   }
 }
 </script>
 
-<style >
+<style>
 
 </style>
