@@ -13,23 +13,15 @@
 </template>
 
 <script>
-import photo from '../../assets/images/productCard.jpg'
 export default {
   props: {
     title: {
       type: String
+    },
+    list: {
+      type: Array
     }
   },
-  data() {
-    return {
-      list: [
-        {name: 'Скальпель анал', price: '3 600 P', link: '/', image: photo},
-        {name: 'Скальпель анал', price: '3 600 P', link: '/', image: photo},
-        {name: 'Скальпель анал', price: '3 600 P', link: '/', image: photo},
-        {name: 'Скальпель анал', price: '3 600 P', link: '/', image: photo},
-      ]
-    }
-  }
 }
 </script>
 
