@@ -52,4 +52,10 @@ export default {
   border-radius: 10px;
   border: 1px solid var(--black-0-3, rgba(51, 51, 51, 0.30));
 }
+
+@media (max-width: 1024px) {
+  .product-card-image {
+    height: auto;
+  }
+}
 </style>

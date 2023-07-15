@@ -6,13 +6,15 @@
       </custom-header>
       <arrow-link-icon/>
     </div>
-    <custom-grid tag="ul" columns="4">
+    <custom-grid class="cards-grid-main" tag="ul" columns="4">
       <product-card :list="list"/>
     </custom-grid>
   </section>
 </template>
 
 <script>
+
+// ADAPTIVE ADD!!!!!!
 export default {
   props: {
     title: {
@@ -34,5 +36,17 @@ export default {
 
 .cards-header svg {
   margin-left: 25px;
+}
+
+@media (max-width: 1024px) {
+  .cards-grid-main {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .cards-grid-main {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }
 </style>

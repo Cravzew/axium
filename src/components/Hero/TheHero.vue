@@ -47,6 +47,8 @@ export default {
 
 .hero-content {
   max-width: 429px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-header {
@@ -58,5 +60,25 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+@media (max-width: 1024px) {
+  .hero-image {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: inherit;
+  }
+}
+
+@media (max-width: 578px) {
+  .hero {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

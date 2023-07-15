@@ -57,4 +57,16 @@ export default {}
   max-width: 746px;
   padding: 52px 0;
 }
+
+@media (max-width: 770px) {
+  .about-main {
+    flex-direction: column;
+  }
+
+  .about-main-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
 </style>

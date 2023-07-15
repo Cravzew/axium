@@ -1,6 +1,6 @@
 <template>
   <section class="catalog-main">
-    <custom-grid columns="4" style="gap: 24px">
+    <custom-grid class="grid-catalog-main" tag="ul" columns="4" style="gap: 24px">
       <catalog-main-card color="var(--other-category-1)" header="Имплантология" :list="listOne"/>
       <catalog-main-card color="var(--other-category-2)" header="Хирургия" :list="listTwo"/>
       <catalog-main-card color="var(--other-category-3)" header="Пародонтология" :list="listThree"/>
@@ -241,7 +241,20 @@ export default {
 </script>
 
 <style scoped>
+
 .catalog-main {
   padding-bottom: 120px;
+}
+
+@media (max-width: 1200px) {
+  .grid-catalog-main {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-catalog-main {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }
 </style>
