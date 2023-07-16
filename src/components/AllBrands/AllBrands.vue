@@ -66,4 +66,10 @@ export default {}
   }
 }
 
+@media (max-width: 576px) {
+  .all-brands-grid a img {
+    width: 200px;
+  }
+}
+
 </style>

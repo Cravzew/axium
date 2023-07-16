@@ -1,126 +1,35 @@
 <template>
   <header>
     <custom-container>
-      <div class="header-upper">
-        <nav class="header-upper-left">
-          <router-link to="/">
-            <custom-text>
-              О компании
-            </custom-text>
-          </router-link>
-          <router-link to="/">
-            <custom-text>
-              Новости
-            </custom-text>
-          </router-link>
-          <router-link to="/">
-            <custom-text>
-              Статьи
-            </custom-text>
-          </router-link>
-          <router-link to="/">
-            <custom-text>
-              Контакты
-            </custom-text>
-          </router-link>
-        </nav>
-        <div class="header-upper-right">
-          <custom-text class="header-upper-text" tag="a" href="tel:74959336147">
-            <phone-icon/>
-            +7 (495) 933-6147
-          </custom-text>
-          <custom-text class="header-upper-text" tag="a" href="mailto:max@maximum.su">
-            <mail-icon/>
-            max@maximum.su
-          </custom-text>
-        </div>
-      </div>
+      <header-upper-desktop/>
+      <header-middle/>
       <div class="header-down">
-        <router-link class="mr-101" to="/">
-          <img src="../../assets/images/logo.jpg" alt="logo axium">
-        </router-link>
-        <custom-button class="mr-101">
-          Каталог
-        </custom-button>
-        <custom-input class="mr-101" placeholder="Поиск по сайту..." max-width="610px" button/>
-        <div class="header-down-icons">
-          <div class="header-counter">
-            <card-icon/>
-            <custom-text>
-              0
-            </custom-text>
-          </div>
-          <div class="header-counter">
-            <heart-icon/>
-            <custom-text>
-              0
-            </custom-text>
-          </div>
-        </div>
+        <custom-input class="header-input" placeholder="Поиск по сайту..." button max-width="100%"/>
       </div>
     </custom-container>
   </header>
 </template>
 
 <script>
-export default {};
+import HeaderUpperDesktop from "@/components/Header/HeaderUpperDesktop.vue";
+import HeaderMiddle from "@/components/Header/HeaderMiddle.vue";
+
+export default {
+  components: {HeaderMiddle, HeaderUpperDesktop},
+};
 </script>
 
 <style>
-.header-counter {
-  display: flex;
-  align-items: center;
-}
-
-.header-counter svg {
-  margin-right: 10px;
-}
-
-.header-down-icons {
-  display: flex;
-  align-items: center;
-  max-width: 125px;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.mr-101 {
-  margin-right: 101px;
-}
 
 .header-down {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
+  display: none;
 }
 
-.header-upper {
-  display: flex;
-  padding: 24px 0;
-  justify-content: space-between;
+@media (max-width: 1024px) {
+  .header-down {
+    display: block;
+    margin-bottom: 40px;
+  }
 }
 
-.header-upper-left {
-  display: flex;
-  justify-content: space-between;
-  max-width: 346px;
-  width: 100%;
-}
-
-.header-upper-right {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 367px;
-  width: 100%;
-}
-
-.header-upper-text {
-  display: flex;
-  align-items: center;
-}
-
-.header-upper-text svg {
-  margin-right: 16px;
-}
 </style>

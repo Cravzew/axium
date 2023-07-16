@@ -1,14 +1,21 @@
-import { createStore } from 'vuex';
+import {createStore} from 'vuex';
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  },
+    state: {
+        isScrollBlocked: false
+    },
+    getters: {},
+    mutations: {
+        toggleScrollBlocking(state) {
+            state.isScrollBlocked = !state.isScrollBlocked;
+
+            if (state.isScrollBlocked) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+    },
+    actions: {},
+    modules: {},
 });

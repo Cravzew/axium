@@ -104,4 +104,21 @@ export default {
   margin-top: 120px;
   margin-bottom: 30px;
 }
+
+@media (max-width: 1024px) {
+  .footer-up {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-up {
+    grid-template-columns: repeat(1, 1fr) !important;
+    text-align: center;
+  }
+
+  .footer-down {
+    flex-direction: column;
+  }
+}
 </style>

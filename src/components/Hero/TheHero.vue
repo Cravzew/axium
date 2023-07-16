@@ -66,9 +66,7 @@ export default {
   .hero-image {
     display: none;
   }
-}
 
-@media (max-width: 768px) {
   .hero-content {
     max-width: inherit;
   }
