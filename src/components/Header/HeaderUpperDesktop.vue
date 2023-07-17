@@ -46,6 +46,10 @@ export default {}
   justify-content: space-between;
 }
 
+.header-upper-right a svg {
+  margin-right: 17px;
+}
+
 .header-upper-left {
   display: flex;
   justify-content: space-between;

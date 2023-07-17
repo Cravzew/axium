@@ -4,6 +4,7 @@ import searchIcon from "@/assets/icons/SearchIcon.vue";
 import heartIcon from "@/assets/icons/HeartIcon.vue";
 import cardIcon from "@/assets/icons/CardIcon.vue";
 import arrowLinkIcon from "@/assets/icons/ArrowLinkIcon.vue";
+import blueSquareIcon from "@/assets/icons/BlueSquareIcon.vue";
 
 export default [
     phoneIcon,
@@ -11,5 +12,6 @@ export default [
     searchIcon,
     heartIcon,
     cardIcon,
-    arrowLinkIcon
+    arrowLinkIcon,
+    blueSquareIcon
 ];

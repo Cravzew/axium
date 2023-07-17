@@ -6,6 +6,9 @@ import customInput from "@/components/UI/CustomInput.vue";
 import customGrid from "@/components/UI/CustomGrid.vue";
 import customList from "@/components/UI/CustomListText.vue";
 import productCard from "@/components/UI/ProductCard.vue";
+import toPath from "@/components/UI/ToPath.vue";
+import categoryCard from "@/components/UI/CategoryCard.vue";
+import headerSection from "@/components/UI/HeaderSection.vue";
 
 export default [
     MainContainer,
@@ -15,5 +18,8 @@ export default [
     customInput,
     customGrid,
     customList,
-    productCard
+    productCard,
+    toPath,
+    categoryCard,
+    headerSection
 ];

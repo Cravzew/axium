@@ -6,7 +6,9 @@
       </custom-header>
       <custom-list-text icon-margin-right="20px" :list="list" margin="0 0 15px 20px" text-size="16"/>
       <custom-button class="hero-button" big>
-        Каталог
+        <router-link to="/catalog">
+          Каталог
+        </router-link>
       </custom-button>
     </div>
     <img class="hero-image" src="../../assets/images/heroImage.jpg" alt="heroImage">
@@ -15,6 +17,7 @@
 
 <script>
 import objectSvg from "@/assets/icons/objectSvg";
+
 export default {
   data() {
     return {
@@ -24,7 +27,7 @@ export default {
         {name: 'Ut viverra viverra phasellus id in eleifend.', class: 'hero-list', icon: objectSvg.blueSquare},
       ]
     }
-  }
+  },
 }
 </script>
 

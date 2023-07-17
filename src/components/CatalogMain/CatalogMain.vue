@@ -8,7 +8,7 @@
       <catalog-main-card color="var(--other-category-5)" header="Терапия и диагностика" :list="listFive"/>
       <catalog-main-card color="var(--other-category-6)" header="Ортодонтия" :list="listSix"/>
       <catalog-main-card color="var(--other-category-7)" header="Расходные материалы" :list="listSeven"/>
-      <catalog-main-card color="var(--other-category-8)" header="Весь каталог"/>
+      <catalog-main-card color="var(--other-category-8)" header="Весь каталог" link="/catalog"/>
     </custom-grid>
   </section>
 </template>

@@ -5,7 +5,9 @@
       <img src="../../assets/images/logo.jpg" alt="logo axium">
     </router-link>
     <custom-button class="header-catalog">
-      Каталог
+      <router-link to="/catalog">
+        Каталог
+      </router-link>
     </custom-button>
     <custom-input class="header-input" placeholder="Поиск по сайту..." max-width="610px" button/>
     <div class="header-down-icons">
@@ -24,7 +26,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import BurgerMenu from "@/components/UI/BurgerMenu.vue";
 

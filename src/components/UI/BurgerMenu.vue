@@ -28,7 +28,9 @@
           </custom-text>
         </router-link>
         <custom-button class="catalog-button">
-          Каталог
+          <router-link to="/catalog">
+            Каталог
+          </router-link>
         </custom-button>
       </ul>
     </transition>
@@ -89,10 +91,15 @@ export default {
   margin-top: 30px;
 }
 
+.header-burger-list button p a {
+  margin-top: 0;
+}
+
 .header-burger-overlay {
   position: absolute;
   inset: 0;
   background-color: var(--black-0-3);
+  z-index: 6;
 }
 
 .header-burger {

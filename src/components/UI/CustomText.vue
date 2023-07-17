@@ -40,6 +40,7 @@ export default {
 </script>
 
 <style>
+
 .text-16 {
   line-height: 150%;
   font-size: 16px;
