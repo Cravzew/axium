@@ -1,10 +1,8 @@
 <template>
   <li class="product-card" v-for="(item, index) in list" :key="index + Math.round(Math.random() * 1000)">
-    <router-link :to="item.link">
-      <div class="product-card-image">
-        <img :src="item.image" :alt="item.alt">
-      </div>
-    </router-link>
+    <div class="product-card-image">
+      <img :src="item.image" :alt="item.alt">
+    </div>
     <div class="product-card-content">
       <custom-text style="margin-bottom: 15px;" size="14">
         {{ item.name }}
@@ -33,7 +31,6 @@ export default {
 <style scoped>
 .product-card-content {
   padding: 20px;
-  margin-top: 20px;
   border-top: 1px solid var(--black-0-3, rgba(51, 51, 51, 0.30));
 }
 
@@ -50,6 +47,8 @@ export default {
 
 .product-card {
   border-radius: 10px;
+  min-width: 306px;
+  max-height: 353px;
   border: 1px solid var(--black-0-3, rgba(51, 51, 51, 0.30));
 }
 

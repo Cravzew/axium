@@ -1,10 +1,9 @@
 <template>
-  <li class="category-card" v-for="(item, index) in list" :key="index">
-    <router-link :to="item.link">
-      <div class="category-card-image">
-        <img :src="item.image" :alt="item.alt">
-      </div>
-    </router-link>
+  <li class="category-card" @click="this.$router.push({name: 'products', query: {'category': item.link, 'page': 1}})"
+      v-for="(item, index) in list" :key="index">
+    <div class="category-card-image">
+      <img :src="item.image" :alt="item.alt">
+    </div>
     <div class="category-card-content">
       <custom-header tag="h3" style="margin-bottom: 30px;" size="21">
         {{ item.name }}

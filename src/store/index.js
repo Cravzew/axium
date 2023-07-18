@@ -1,8 +1,9 @@
 import {createStore} from 'vuex';
+import {implantologyModule} from "@/store/modules/implantology";
 
 export default createStore({
     state: {
-        isScrollBlocked: false
+        isScrollBlocked: false,
     },
     getters: {},
     mutations: {
@@ -17,5 +18,7 @@ export default createStore({
         }
     },
     actions: {},
-    modules: {},
+    modules: {
+        implantologyModule
+    },
 });

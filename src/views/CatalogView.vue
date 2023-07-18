@@ -22,13 +22,13 @@ export default {
     return {
       paths: ['Главная', 'Каталог'],
       list: [
-        {name: 'Имплантология', link: '/', image: photo},
-        {name: 'Хирургия', link: '/', image: photo},
-        {name: 'Пародонтология', link: '/', image: photo},
-        {name: 'Ортопедия', link: '/', image: photo},
-        {name: 'Терапия и диагностика', link: '/', image: photo},
-        {name: 'Ортодонтия', link: '/', image: photo},
-        {name: 'Расходные материалы', link: '/', image: photo},
+        {name: 'Имплантология', link: 'implantology', image: photo},
+        {name: 'Хирургия', link: 'surgery', image: photo},
+        {name: 'Пародонтология', link: 'periodontology', image: photo},
+        {name: 'Ортопедия', link: 'orthopedics', image: photo},
+        {name: 'Терапия и диагностика', link: 'diagnostics', image: photo},
+        {name: 'Ортодонтия', link: 'orthodontics', image: photo},
+        {name: 'Расходные материалы', link: 'other', image: photo},
       ]
     }
   }

@@ -9,6 +9,7 @@ import productCard from "@/components/UI/ProductCard.vue";
 import toPath from "@/components/UI/ToPath.vue";
 import categoryCard from "@/components/UI/CategoryCard.vue";
 import headerSection from "@/components/UI/HeaderSection.vue";
+import customLabel from "@/components/UI/CustomLabel.vue";
 
 export default [
     MainContainer,
@@ -21,5 +22,6 @@ export default [
     productCard,
     toPath,
     categoryCard,
-    headerSection
+    headerSection,
+    customLabel
 ];
