@@ -47,8 +47,8 @@ export default {
 
 .product-card {
   border-radius: 10px;
-  min-width: 306px;
-  max-height: 353px;
+  max-width: 306px;
+  width: 100%;
   border: 1px solid var(--black-0-3, rgba(51, 51, 51, 0.30));
 }
 

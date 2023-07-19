@@ -4,6 +4,32 @@
     <header-section style="margin-bottom: 60px;">
       {{ product.title }}
     </header-section>
+    <div class="catalog-buttons">
+      <custom-button @click="toggleActive">
+        Фильтры
+      </custom-button>
+      <div v-if="isOpen" class="catalog-burger">
+        <div>
+          <custom-header size="21" style="margin: 0; margin-bottom: 24px;">
+            Бренды
+          </custom-header>
+          <div class="brands-radio-list">
+            <custom-label :options="brands" type="checkbox"/>
+          </div>
+        </div>
+        <div>
+          <custom-header size="21" style="margin: 0; margin-bottom: 24px;">
+            Наличие
+          </custom-header>
+          <div class="brands-radio-list">
+            <custom-label :options="available" type="radio"/>
+          </div>
+          <custom-button @click="toggleActive" class="catalog-burger-close">
+            X
+          </custom-button>
+        </div>
+      </div>
+    </div>
     <div class="catalogs">
       <div class="catalogs-aside">
         <div>
@@ -23,21 +49,24 @@
           </div>
         </div>
       </div>
-      <custom-grid v-if="displayedPosts.length > 1" tag="ul" style="max-width: 966px; margin-left: auto" columns="3">
+      <ul class="catalog-group" v-if="displayedPosts.length > 1" tag="ul" style="max-width: 966px; margin-left: auto"
+          columns="3">
         <product-card :list="displayedPosts"/>
-      </custom-grid>
+      </ul>
       <custom-text style="text-align: center" v-else>
         Товар отсутствует
       </custom-text>
     </div>
     <div class="pagination-container" v-if="displayedPosts.length > 1">
-      <custom-button class="catalog-pagination" style="background-color: var(--accent-2)" v-if="currentPage !== 1" @click="displayPosts(currentPage - 1)">
+      <custom-button class="catalog-pagination" style="background-color: var(--accent-2)" v-if="currentPage !== 1"
+                     @click="displayPosts(currentPage - 1)">
         {{ currentPage - 1 }}
       </custom-button>
       <custom-button class="catalog-pagination">
         {{ currentPage }}
       </custom-button>
-      <custom-button class="catalog-pagination" style="background-color: var(--accent-2)" v-if="currentPage !== totalPages"
+      <custom-button class="catalog-pagination" style="background-color: var(--accent-2)"
+                     v-if="currentPage !== totalPages"
                      @click="displayPosts(currentPage + 1)">
         {{ currentPage + 1 }}
       </custom-button>
@@ -67,6 +96,8 @@ export default {
         {id: 'option2', value: 'available', label: 'Под заказ'},
       ],
       postsPerPage: 12,
+      isActive: false,
+      isOpen: false
     }
   },
   computed: {
@@ -115,12 +146,50 @@ export default {
         }
       })
       this.$router.push({query: {'category': result, 'page': pageNumber}});
+    },
+    toggleActive() {
+      this.isActive = !this.isActive;
+      this.$store.commit('toggleScrollBlocking');
+      this.isOpen = !this.isOpen;
+      window.scrollTo(0, 0)
     }
   }
 }
 </script>
 
 <style scoped>
+
+.catalog-burger {
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  background-color: var(--white);
+}
+
+.catalog-burger-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.catalog-burger {
+  padding: 40px;
+}
+
+.catalog-buttons {
+  display: none;
+}
+
+.catalog-group {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 24px;
+  justify-content: flex-end;
+}
 
 .catalog-pagination {
   margin-right: 16px;
@@ -150,4 +219,20 @@ export default {
   top: 60px;
 }
 
+@media (max-width: 1024px) {
+  .catalogs-aside {
+    display: none;
+  }
+
+  .catalog-group {
+    justify-content: center;
+  }
+
+  .catalog-buttons {
+    display: flex;
+    max-width: 240px;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+}
 </style>
