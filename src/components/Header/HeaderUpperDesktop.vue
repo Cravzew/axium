@@ -1,7 +1,7 @@
 <template>
   <div class="header-upper">
     <nav class="header-upper-left">
-      <router-link to="/">
+      <router-link to="#about-us">
         <custom-text>
           О компании
         </custom-text>

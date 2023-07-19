@@ -11,7 +11,7 @@
             Бренды
           </custom-header>
           <div class="brands-radio-list">
-            <custom-label :options="brands" :selected-option="selectedOption"/>
+            <custom-label :options="brands" type="checkbox"/>
           </div>
         </div>
         <div>
@@ -19,17 +19,27 @@
             Наличие
           </custom-header>
           <div class="brands-radio-list">
-            <custom-label :options="available" :selected-option="selectedOption"/>
+            <custom-label :options="available" type="radio"/>
           </div>
         </div>
       </div>
-      <custom-grid tag="ul" style="max-width: 966px; margin-left: auto" columns="3">
+      <custom-grid v-if="displayedPosts.length > 1" tag="ul" style="max-width: 966px; margin-left: auto" columns="3">
         <product-card :list="displayedPosts"/>
       </custom-grid>
+      <custom-text style="text-align: center" v-else>
+        Товар отсутствует
+      </custom-text>
     </div>
-    <div class="pagination-container">
-      <custom-button class="catalog-pagination" v-for="page in totalPages" :key="page" @click="displayPosts(page)">
-        {{ page }}
+    <div class="pagination-container" v-if="displayedPosts.length > 1">
+      <custom-button class="catalog-pagination" style="background-color: var(--accent-2)" v-if="currentPage !== 1" @click="displayPosts(currentPage - 1)">
+        {{ currentPage - 1 }}
+      </custom-button>
+      <custom-button class="catalog-pagination">
+        {{ currentPage }}
+      </custom-button>
+      <custom-button class="catalog-pagination" style="background-color: var(--accent-2)" v-if="currentPage !== totalPages"
+                     @click="displayPosts(currentPage + 1)">
+        {{ currentPage + 1 }}
       </custom-button>
     </div>
   </custom-container>
@@ -56,7 +66,6 @@ export default {
         {id: 'option1', value: 'available', label: 'В наличии'},
         {id: 'option2', value: 'available', label: 'Под заказ'},
       ],
-      selectedOption: null,
       postsPerPage: 12,
     }
   },
@@ -79,15 +88,33 @@ export default {
     displayedPosts() {
       const startIndex = (this.currentPage - 1) * this.postsPerPage;
       const endIndex = this.currentPage * this.postsPerPage;
-      return this.products[0].list.slice(startIndex, endIndex);
+      let result = []
+      this.products.map((item) => {
+        if (item.article === this.$route.query.category) {
+          result = result.concat(item.list)
+        }
+      })
+      return result.slice(startIndex, endIndex);
     },
     totalPages() {
-      return Math.ceil(this.products[0].list.length / this.postsPerPage);
+      let result = []
+      this.products.map((item) => {
+        if (item.article === this.$route.query.category) {
+          result = result.concat(item.list)
+        }
+      })
+      return Math.ceil(result.length / this.postsPerPage);
     }
   },
   methods: {
     displayPosts(pageNumber) {
-      this.$router.push({ query: {'category': this.products[0].article, 'page': pageNumber}});
+      let result;
+      this.products.map((item) => {
+        if (item.article === this.$route.query.category) {
+          result = item.article
+        }
+      })
+      this.$router.push({query: {'category': result, 'page': pageNumber}});
     }
   }
 }

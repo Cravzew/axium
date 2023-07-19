@@ -1,13 +1,13 @@
 <template>
   <section class="catalog-main">
     <custom-grid class="grid-catalog-main" tag="ul" columns="4" style="gap: 24px">
-      <catalog-main-card color="var(--other-category-1)" header="Имплантология" :list="listOne"/>
-      <catalog-main-card color="var(--other-category-2)" header="Хирургия" :list="listTwo"/>
-      <catalog-main-card color="var(--other-category-3)" header="Пародонтология" :list="listThree"/>
-      <catalog-main-card color="var(--other-category-4)" header="Ортопедия" :list="listFour"/>
-      <catalog-main-card color="var(--other-category-5)" header="Терапия и диагностика" :list="listFive"/>
-      <catalog-main-card color="var(--other-category-6)" header="Ортодонтия" :list="listSix"/>
-      <catalog-main-card color="var(--other-category-7)" header="Расходные материалы" :list="listSeven"/>
+      <catalog-main-card color="var(--other-category-1)" header="Имплантология" :list="listOne" link="/products?category=implantology&page=1"/>
+      <catalog-main-card color="var(--other-category-2)" header="Хирургия" :list="listTwo" link="/products?category=surgery&page=1"/>
+      <catalog-main-card color="var(--other-category-3)" header="Пародонтология" :list="listThree" link="/products?category=periodontology&page=1"/>
+      <catalog-main-card color="var(--other-category-4)" header="Ортопедия" :list="listFour" link="/products?category=orthopedics&page=1"/>
+      <catalog-main-card color="var(--other-category-5)" header="Терапия и диагностика" :list="listFive" link="/products?category=diagnostics&page=1"/>
+      <catalog-main-card color="var(--other-category-6)" header="Ортодонтия" :list="listSix" link="/products?category=orthodontics&page=1"/>
+      <catalog-main-card color="var(--other-category-7)" header="Расходные материалы" :list="listSeven" link="/products?category=other&page=1"/>
       <catalog-main-card color="var(--other-category-8)" header="Весь каталог" link="/catalog"/>
     </custom-grid>
   </section>

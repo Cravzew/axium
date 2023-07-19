@@ -1,7 +1,7 @@
 <template>
   <div class="label" v-for="option in options" :key="option.id">
     <label class="custom-label">
-      <input :type="type" :name="option.value" @change="$emit('change', selectedOption)" :value="option.value">
+      <input :type="type" :name="option.value" :value="option.value">
       <custom-text tag="span">{{ option.label }}</custom-text>
     </label>
   </div>
@@ -14,11 +14,9 @@ export default {
     options: {
       type: Array
     },
-    selectedOption: {
-      type: String
-    },
     type: {
-      type: String
+      type: String,
+      required: true
     }
   }
 };

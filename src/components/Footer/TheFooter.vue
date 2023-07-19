@@ -21,7 +21,7 @@
           <custom-header size="16b" tag="h2">
             Контакты
           </custom-header>
-          <custom-list-text icon-margin-right="15px" is-link :list="contacts" text-color="var(--black)"/>
+          <custom-list-text icon-margin-right="15px" :list="contacts" text-color="var(--black)"/>
         </nav>
       </custom-grid>
       <div class="footer-down">
@@ -43,19 +43,19 @@ export default {
   data() {
     return {
       aboutCompany: [
-        {name: 'О компании', link: '/', class: 'footer-nav-list'},
+        {name: 'О компании', link: '#about-us', class: 'footer-nav-list'},
         {name: 'Новости', link: '/', class: 'footer-nav-list'},
         {name: 'Контакты', link: '/', class: 'footer-nav-list'},
         {name: 'Статьи', link: '/', class: 'footer-nav-list'}
       ],
       category: [
-        {name: 'Имплантология', link: '/', class: 'footer-nav-list'},
-        {name: 'Хирургия', link: '/', class: 'footer-nav-list'},
-        {name: 'Пародонтология', link: '/', class: 'footer-nav-list'},
-        {name: 'Ортопедия', link: '/', class: 'footer-nav-list'},
-        {name: 'Терапия и диагностика', link: '/', class: 'footer-nav-list'},
-        {name: 'Ортодонтия', link: '/', class: 'footer-nav-list'},
-        {name: 'Расходные материалы', link: '/', class: 'footer-nav-list'},
+        {name: 'Имплантология', link: '/products?category=implantology&page=1', class: 'footer-nav-list'},
+        {name: 'Хирургия', link: '/products?category=surgery&page=1', class: 'footer-nav-list'},
+        {name: 'Пародонтология', link: '/products?category=periodontology&page=1', class: 'footer-nav-list'},
+        {name: 'Ортопедия', link: '/products?category=orthopedics&page=1', class: 'footer-nav-list'},
+        {name: 'Терапия и диагностика', link: '/products?category=diagnostics&page=1', class: 'footer-nav-list'},
+        {name: 'Ортодонтия', link: '/products?category=orthodontics&page=1', class: 'footer-nav-list'},
+        {name: 'Расходные материалы', link: '/products?category=other&page=1', class: 'footer-nav-list'},
         {name: 'Оборудование', link: '/', class: 'footer-nav-list'}
       ],
       contacts: [
@@ -65,9 +65,9 @@ export default {
           icon: iconObject.map,
           class: 'footer-nav-list'
         },
-        {name: '+7 (495) 933-6147', link: '/', icon: iconObject.phone, class: 'footer-nav-list'},
-        {name: '+7 (495) 933-6147', link: '/', icon: iconObject.phone, class: 'footer-nav-list'},
-        {name: 'max@maximum.su', link: '/', icon: iconObject.mail, class: 'footer-nav-list'}
+        {name: '+7 (495) 933-6147', link: 'tel:+74959336147', icon: iconObject.phone, class: 'footer-nav-list'},
+        {name: '+7 (495) 933-6147', link: 'tel:+74959336147', icon: iconObject.phone, class: 'footer-nav-list'},
+        {name: 'max@maximum.su', link: 'mailto:max@maximum.su', icon: iconObject.mail, class: 'footer-nav-list'}
       ],
     }
   },

@@ -1,5 +1,5 @@
 <template>
-  <section class="about-main">
+  <section class="about-main" id="about-us">
     <div class="about-main-text">
       <custom-text style="margin-bottom: 10px;" size="16">
         Компания "Медтех" - это лидер в области производства и продажи медицинского оборудования. Мы работаем на рынке

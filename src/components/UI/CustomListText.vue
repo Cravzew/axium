@@ -9,7 +9,9 @@
         </custom-text>
       </router-link>
       <custom-text :color="textColor" :size="textSize" v-else>
-        {{ item.name }}
+        <a :href="item.link">
+          {{ item.name }}
+        </a>
       </custom-text>
     </li>
   </component>

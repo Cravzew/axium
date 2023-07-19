@@ -12,7 +12,7 @@
             О компании
           </custom-text>
         </router-link>
-        <router-link to="/">
+        <router-link to="#about-us">
           <custom-text size="16">
             Новости
           </custom-text>
